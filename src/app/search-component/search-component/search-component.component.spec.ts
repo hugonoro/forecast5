@@ -3,23 +3,34 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SearchComponentComponent } from './search-component.component';
 
 describe('SearchComponentComponent', () => {
-  let component: SearchComponentComponent;
-  let fixture: ComponentFixture<SearchComponentComponent>;
+    let component: SearchComponentComponent;
+    let fixture: ComponentFixture<SearchComponentComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SearchComponentComponent ]
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [SearchComponentComponent]
+        })
+            .compileComponents();
+    }));
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(SearchComponentComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it('should emit search term upon search', () => {
+        const mockSearch = 'London';
+
+        component.search
+            .subscribe(searchTerm => {
+                expect(searchTerm).toEqual(mockSearch);
+            });
+
+        component.searchByText(mockSearch);
     })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SearchComponentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
