@@ -1,3 +1,4 @@
-<p>
-  search-component works!
-</p>
+<div class="search-container">
+  <input class="search-box" #searchBox placeholder="Search a city">
+  <button class="search-button" (click)="searchByText(searchBox.value)">Search</button>
+</div>
