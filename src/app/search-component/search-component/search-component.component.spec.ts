@@ -43,7 +43,7 @@ describe('SearchComponentComponent', () => {
     });
 
     it('should emit search when clicking the search button', () => {
-        const mockSearch = 'Madrid'
+        const mockSearch = 'Madrid';
 
         searchBoxElement.nativeElement.value = mockSearch;
 
