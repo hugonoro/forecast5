@@ -22,7 +22,7 @@ export class DataService {
                         'city': forecastData.city.name,
                         'country': forecastData.city.country,
                         'dayForecast': forecastData.list
-                            .filter(dayData => moment(dayData.dt * 1000).isSame(moment().add(1, 'day'), 'day'))
+                            .filter(dayData => moment(dayData.dt * 1000).isBefore(moment().add(24, 'hour'), 'hour'))
                             .map(dayData => {
                                 return {
                                     'time': moment(dayData.dt * 1000).format('LT'),
