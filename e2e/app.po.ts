@@ -1,11 +1,31 @@
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
-  navigateTo() {
-    return browser.get('/');
-  }
+    navigateHome() {
+        return browser.get('/');
+    }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
-  }
+    getPageTitle() {
+        return element(by.css('h1')).getText();
+    }
+
+    getSearchBox() {
+        return element(by.css('.search-box'));
+    }
+
+    getSearchButton() {
+        return element(by.css('.search-button'));
+    }
+
+    getSearchResultsTable() {
+        return element(by.css('.search-results'));
+    }
+
+    getSearchResultItems() {
+        return element.all(by.css('.search-result-item'));
+    }
+
+    getError() {
+        return element(by.css('.error'));
+    }
 }
