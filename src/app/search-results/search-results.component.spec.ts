@@ -1,8 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SearchResultsComponent } from './search-results.component';
 import { Component, ViewChild } from '@angular/core';
 
+import { SearchResultsComponent } from './search-results.component';
 import { ForecastResult } from '../core/models/forecast';
 
 @Component({

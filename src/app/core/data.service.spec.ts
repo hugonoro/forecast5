@@ -1,8 +1,9 @@
 import { TestBed, inject } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
+import * as moment from 'moment';
 
 import { DataService } from './data.service';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import * as moment from 'moment';
 
 describe('DataServiceService', () => {
     let mockCity;

@@ -1,10 +1,11 @@
-import { TestBed, async, inject, ComponentFixture, tick, fakeAsync } from '@angular/core/testing';
+import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { DataService } from './core/data.service';
 import { SearchComponent } from './search/search.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
-import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+
 
 describe('AppComponent', () => {
     let component: AppComponent;
@@ -34,8 +35,6 @@ describe('AppComponent', () => {
         fixture.detectChanges();
     });
     it('should create the app', () => {
-        // const fixture = TestBed.createComponent(AppComponent);
-        // const app = fixture.debugElement.componentInstance;
         expect(component).toBeTruthy();
     });
 
@@ -48,7 +47,6 @@ describe('AppComponent', () => {
 
         expect(serviceSpy).toHaveBeenCalledTimes(1);
         expect(serviceSpy).toHaveBeenCalledWith(mockSearch);
-
     }));
 })
 ;

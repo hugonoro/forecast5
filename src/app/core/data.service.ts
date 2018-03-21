@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 
+import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators/map';
 
 import * as moment from 'moment';

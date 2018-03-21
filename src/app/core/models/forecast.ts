@@ -5,6 +5,6 @@ export interface ForecastResult {
 }
 
 export interface TimeForecast {
-    time: string;
     temperature: number;
+    time: string;
 }
