@@ -1,24 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchComponentComponent } from './search-component.component';
+import { SearchComponent } from './search.component';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-describe('SearchComponentComponent', () => {
-    let component: SearchComponentComponent;
-    let fixture: ComponentFixture<SearchComponentComponent>;
+describe('SearchComponent', () => {
+    let component: SearchComponent;
+    let fixture: ComponentFixture<SearchComponent>;
     let searchBoxElement: DebugElement;
     let searchButtonElement: DebugElement;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SearchComponentComponent]
+            declarations: [SearchComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SearchComponentComponent);
+        fixture = TestBed.createComponent(SearchComponent);
         component = fixture.componentInstance;
 
         searchBoxElement = fixture.debugElement.query(By.css('.search-box'));
