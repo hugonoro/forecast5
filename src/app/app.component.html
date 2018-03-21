@@ -1,7 +1,8 @@
 <section class="main-content">
   <h1>
-   24 hours weather forecast
+    24 hours weather forecast
   </h1>
   <app-search-component (search)="onSearch($event)"></app-search-component>
+  <app-search-results [result]="searchResult"></app-search-results>
 </section>
 

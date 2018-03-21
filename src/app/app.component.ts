@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ForecastResult } from './core/models/forecast';
+import { DataService } from './core/data.service';
 
 @Component({
     selector: 'app-root',
@@ -7,7 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    onSearch(searchTerm): void {
+    searchResult: ForecastResult;
 
+
+    constructor(private dataService: DataService) {
+    }
+
+    onSearch(searchTerm): void {
+        this.dataService.getForecastByCityName(searchTerm)
+            .subscribe(data => {
+                this.searchResult = data;
+            })
     }
 }
