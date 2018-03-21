@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators/map';
 
 import * as moment from 'moment';
+
 import { ForecastResult } from './models/forecast';
 
 

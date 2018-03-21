@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+
 import { ForecastResult } from '../core/models/forecast';
 
 @Component({
